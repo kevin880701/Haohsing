@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context=".ui.main.user.setting.PowerScheduleFragment">
+
+    <include
+        android:id="@+id/il_toolbar"
+        layout="@layout/layout_toolbar_white" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:orientation="vertical"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:includeFontPadding="false"
+                    android:text="設定"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                    android:textColor="#1f1f1f" />
+
+                <include
+                    android:id="@+id/il_name"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="12dp" />
+
+                <include
+                    android:id="@+id/il_power_on_time"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_power_off_time"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="84dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_r10_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:includeFontPadding="false"
+                        android:text="星期"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ToggleButton
+                        android:id="@+id/tv_mon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/bg_select_weekday_with_unselect"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+                        android:textColor="@color/white"
+                        android:textOff="一"
+                        android:textOn="一"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/tv_tue"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ToggleButton
+                        android:id="@+id/tv_tue"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/bg_select_weekday_with_unselect"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+                        android:textColor="@color/white"
+                        android:textOff="二"
+                        android:textOn="二"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_mon"
+                        app:layout_constraintEnd_toStartOf="@id/tv_wed"
+                        app:layout_constraintStart_toEndOf="@id/tv_mon" />
+
+                    <ToggleButton
+                        android:id="@+id/tv_wed"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/bg_select_weekday_with_unselect"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+                        android:textColor="@color/white"
+                        android:textOff="三"
+                        android:textOn="三"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_mon"
+                        app:layout_constraintEnd_toStartOf="@id/tv_thu"
+                        app:layout_constraintStart_toEndOf="@id/tv_tue" />
+
+                    <ToggleButton
+                        android:id="@+id/tv_thu"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/bg_select_weekday_with_unselect"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+                        android:textColor="@color/white"
+                        android:textOff="四"
+                        android:textOn="四"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_mon"
+                        app:layout_constraintEnd_toStartOf="@id/tv_fri"
+                        app:layout_constraintStart_toEndOf="@id/tv_wed" />
+
+                    <ToggleButton
+                        android:id="@+id/tv_fri"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/bg_select_weekday_with_unselect"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+                        android:textColor="@color/white"
+                        android:textOff="五"
+                        android:textOn="五"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_mon"
+                        app:layout_constraintEnd_toStartOf="@id/tv_sat"
+                        app:layout_constraintStart_toEndOf="@id/tv_thu" />
+
+                    <ToggleButton
+                        android:id="@+id/tv_sat"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/bg_select_weekday_with_unselect"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+                        android:textColor="@color/white"
+                        android:textOff="六"
+                        android:textOn="六"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_mon"
+                        app:layout_constraintEnd_toStartOf="@id/tv_sun"
+                        app:layout_constraintStart_toEndOf="@id/tv_fri" />
+
+                    <ToggleButton
+                        android:id="@+id/tv_sun"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/bg_select_weekday_with_unselect"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+                        android:textColor="@color/white"
+                        android:textOff="日"
+                        android:textOn="日"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_mon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tv_sat" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <include
+                    android:id="@+id/il_preview_notification"
+                    layout="@layout/layout_multi_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="108dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/bt_cancel"
+                        style="@style/Widget.NormalWhiteButton"
+                        android:layout_width="88dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/cancel"
+                        android:textColor="#666666" />
+
+                    <Button
+                        android:id="@+id/bt_save"
+                        style="@style/Widget.NormalButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:enabled="false"
+                        android:includeFontPadding="false"
+                        android:text="@string/save"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/bt_delete"
+                    style="@style/Widget.NormalRedButton.Outline"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="8dp"
+                    android:includeFontPadding="false"
+                    android:text="刪除排程"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                    android:textColor="@color/colorRed"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <include
+            android:id="@+id/il_loading"
+            layout="@layout/layout_loading"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+
+</LinearLayout>

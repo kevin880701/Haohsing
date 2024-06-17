@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.HAOHSING.HeadLine1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/noto_sanstc_medium_500</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.HAOHSING.HeadLine2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="fontFamily">@font/noto_sanstc_medium_500</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.HAOHSING.HeadLine3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="fontFamily">@font/noto_sanstc_medium_500</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.HAOHSING.HeadLine4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/noto_sanstc_medium_500</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#424242</item>
+    </style>
+
+    <style name="TextAppearance.HAOHSING.HeadLine5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/noto_sanstc_medium_500</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.HAOHSING.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/noto_sanstc_regular_400</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.HAOHSING.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/noto_sanstc_regular_400</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#424242</item>
+    </style>
+
+    <style name="TextAppearance.HAOHSING.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/noto_sanstc_regular_400</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+
+    <style name="TextAppearance.Calendar.Header" parent="TextAppearance.HAOHSING.HeadLine3">
+        <item name="android:textColor">@color/colorSecondary</item>
+    </style>
+
+    <style name="TextAppearance.Calendar.Date" parent="TextAppearance.HAOHSING.HeadLine4">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/color_calendar_date</item>
+    </style>
+
+    <style name="TextAppearance.Calendar.WeekDay" parent="TextAppearance.HAOHSING.HeadLine4">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textColor">#343434</item>
+    </style>
+
+
+</resources>

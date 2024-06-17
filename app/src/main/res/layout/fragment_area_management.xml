@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <include
+        android:id="@+id/il_empty"
+        layout="@layout/layout_empty_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/il_toolbar"
+        layout="@layout/layout_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_area_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="24dp"
+        android:includeFontPadding="false"
+        android:text="區域列表"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+        android:textColor="#1f1f1f"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/il_toolbar" />
+
+    <Button
+        android:id="@+id/bt_add_area"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="新增區域"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine5"
+        app:icon="@drawable/ic_add"
+        app:iconGravity="end"
+        app:iconSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_area_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_area_list" />
+
+    <TextView
+        android:id="@+id/tv_area_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:includeFontPadding="false"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+        android:textColor="#acacac"
+        app:layout_constraintStart_toStartOf="@id/tv_area_list"
+        app:layout_constraintTop_toBottomOf="@id/tv_area_list"
+        tools:text="7個區域" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_area_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="19dp"
+        android:layout_marginVertical="8dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_area_count"
+        tools:listitem="@layout/listitem_area" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

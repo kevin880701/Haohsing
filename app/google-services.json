@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "237177868286",
+    "project_id": "haohsing-374de",
+    "storage_bucket": "haohsing-374de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237177868286:android:85acdcd824674b2a38baaf",
+        "android_client_info": {
+          "package_name": "com.clockworkorange.haohsing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237177868286-38e1rs87n68mr5ip8qtm7beethvomkkj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.clockworkorange.haohsing",
+            "certificate_hash": "405d48fa3272674bac4ad539e77fef48657bc663"
+          }
+        },
+        {
+          "client_id": "237177868286-6hflest364kqgtgqk4svsm7vmu2qrrak.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxqcCKYbBr3iWA_AZF1F0riL0aQmSSEN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237177868286-6hflest364kqgtgqk4svsm7vmu2qrrak.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "237177868286-lut9do82lfh43mmn4qq8prs2c97i9h1h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.clockworkorange.haohsing"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

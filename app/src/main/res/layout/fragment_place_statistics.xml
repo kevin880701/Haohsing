@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSecondary"
+    tools:context=".ui.main.user.analysis.place.PlaceStatisticsFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:includeFontPadding="false"
+        android:text="數據分析"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tl_place"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:layout_marginBottom="9dp"
+        android:background="@android:color/transparent"
+        android:fadingEdgeLength="80dp"
+        android:requiresFadingEdge="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginTop="92dp"
+        app:tabIndicator="@drawable/drawable_indicator"
+        app:tabIndicatorColor="@null"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorGravity="bottom"
+        app:tabIndicatorHeight="4dp"
+        app:tabMode="scrollable"
+        app:tabPaddingBottom="-10dp"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabTextAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+        app:tabTextColor="#99FFFFFF" />
+
+    <ImageButton
+        android:id="@+id/bt_previous_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/ic_calendar_left_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/tv_current_month"
+        app:layout_constraintEnd_toStartOf="@id/tv_current_month"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_current_month" />
+
+    <TextView
+        android:id="@+id/tv_current_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:includeFontPadding="false"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/bt_next_month"
+        app:layout_constraintStart_toEndOf="@id/bt_previous_month"
+        app:layout_constraintTop_toBottomOf="@id/tl_place"
+        tools:text="2022年9月" />
+
+    <ImageButton
+        android:id="@+id/bt_next_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/ic_calendar_right_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/tv_current_month"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_current_month"
+        app:layout_constraintTop_toTopOf="@id/tv_current_month" />
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="19dp"
+        android:includeFontPadding="false"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_current_month"
+        tools:text="能源統計 - 共10台" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_count">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_marginHorizontal="20dp"
+                android:orientation="vertical"
+                android:background="@drawable/shape_r10_white">
+
+                <TextView
+                    android:id="@+id/tv_filter_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="濾芯平均壽命"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/colorSecondary"
+                    android:includeFontPadding="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_filter_suggest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="地區平均"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.Subtitle1"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#FF7974"
+                    android:includeFontPadding="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_filter_head"
+                    android:layout_marginTop="2dp" />
+
+                <TextView
+                    android:id="@+id/tv_filter_life_days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                    android:textColor="@color/black"
+                    tools:text="102"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toBottomOf="@id/tv_filter_suggest"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="天"
+                    app:layout_constraintStart_toEndOf="@id/tv_filter_life_days"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_filter_life_days"
+                    android:layout_marginStart="4dp" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <include
+                android:id="@+id/il_panel_water_day_month"
+                layout="@layout/panel_summary_water"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="20dp" />
+
+            <include
+                android:id="@+id/il_panel_pie_chart_water"
+                layout="@layout/panel_pie_chart"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="8dp" />
+
+            <include
+                android:id="@+id/il_panel_power_day_month"
+                layout="@layout/panel_summary_power"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="8dp" />
+
+            <include
+                android:id="@+id/il_panel_pie_chart_power"
+                layout="@layout/panel_pie_chart"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/shape_top_round_r18_background"
+                android:minHeight="300dp"
+                android:orientation="vertical"
+                android:paddingBottom="27dp">
+
+                <HorizontalScrollView
+                    android:id="@+id/sv_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:fadingEdgeLength="10dp"
+                    android:requiresFadingEdge="horizontal"
+                    android:scrollbars="none"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/view_background">
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/cg_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:singleLine="true"
+                        app:singleSelection="true" />
+
+                </HorizontalScrollView>
+
+                <include
+                    android:id="@+id/il_hour_usage_chart"
+                    layout="@layout/panel_hour_usage_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="285dp"
+                    android:layout_marginHorizontal="20dp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_suggest_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_r12_bad6fb"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="13dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="建議"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+                        android:textColor="@color/colorSecondary" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_suggest_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        tools:minHeight="100dp">
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/fl_setup_devices"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_r10_white">
+
+                    <ImageView
+                        android:id="@+id/iv_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginEnd="25dp"
+                        android:src="@drawable/ic_right_arrow" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="12dp"
+                        android:includeFontPadding="false"
+                        android:text="設定"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|bottom"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:includeFontPadding="false"
+                        android:text="同時設定區域內的飲水機"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+                        android:textColor="#666666"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/il_loading"
+        layout="@layout/layout_loading"
+        tools:visibility="invisible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

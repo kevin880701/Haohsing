@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    tools:context=".ui.main.engineer.main.EngineerIdCardDialog">
+
+    <ImageView
+        android:layout_width="63dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/shape_round_acacac" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:includeFontPadding="false"
+        android:text="工務人員資料"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+        android:textColor="#343434" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_user"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:background="@color/colorLightGray"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_user"
+        app:shapeAppearance="@style/RoundedCorner" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:includeFontPadding="false"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine1"
+        android:textColor="@android:color/black"
+        tools:text="張曉明" />
+
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:includeFontPadding="false"
+        android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+        android:textColor="#666666"
+        tools:text="員工編號：232100" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/shape_r10_f3f3f3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:text="服務單位"
+            android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_vendor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+            android:textColor="#808080"
+            tools:text="好水股份有限公司" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_r10_f3f3f3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:text="電話"
+            android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+            android:textColor="@android:color/black"
+            tools:text="0912-123123" />
+
+    </FrameLayout>
+
+</LinearLayout>

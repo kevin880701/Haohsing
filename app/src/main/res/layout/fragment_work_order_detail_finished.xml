@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context=".ui.main.user.devicedetail.workorderlog.finished.WorkOrderDetailFinishedFragment">
+
+    <include
+        android:id="@+id/il_toolbar"
+        layout="@layout/layout_toolbar_white" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:includeFontPadding="false"
+                android:text="基本"
+                android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                android:textColor="#1f1f1f" />
+
+            <include
+                android:id="@+id/il_work_order_id"
+                layout="@layout/layout_info_item"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp" />
+
+            <include
+                android:id="@+id/il_engineer_info"
+                layout="@layout/layout_engineer_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <include
+                android:id="@+id/il_customer_info"
+                layout="@layout/layout_customer_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <include
+                android:id="@+id/il_delivery_datetime"
+                layout="@layout/layout_info_item"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:includeFontPadding="false"
+                android:text="客戶反應內容"
+                android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                android:textColor="#1f1f1f" />
+
+            <include
+                android:id="@+id/il_requirement"
+                layout="@layout/layout_info_item"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp" />
+
+            <include
+                android:id="@+id/il_error_scenario"
+                layout="@layout/layout_multi_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <include
+                android:id="@+id/il_note"
+                layout="@layout/layout_multi_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/tv_maintain_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:includeFontPadding="false"
+                android:text="保養紀錄"
+                android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                android:textColor="#1f1f1f" />
+
+            <include
+                android:id="@+id/il_tds"
+                layout="@layout/layout_info_item"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp" />
+
+            <include
+                android:id="@+id/il_check_tds"
+                layout="@layout/layout_info_item"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp" />
+
+            <include
+                android:id="@+id/il_change_filter"
+                layout="@layout/layout_multi_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <include
+                android:id="@+id/il_basic_maintain"
+                layout="@layout/layout_multi_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/tv_repair_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:includeFontPadding="false"
+                android:text="維修紀錄"
+                android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                android:textColor="#1f1f1f" />
+
+            <include
+                android:id="@+id/il_error_code"
+                layout="@layout/layout_multi_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <include
+                android:id="@+id/il_repair_parts"
+                layout="@layout/layout_multi_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <include
+                android:id="@+id/il_change_parts"
+                layout="@layout/layout_multi_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/tv_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:includeFontPadding="false"
+                android:text="確認項目"
+                android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                android:textColor="#1f1f1f" />
+
+            <include
+                android:id="@+id/il_quotation"
+                layout="@layout/layout_info_item"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="12dp" />
+
+            <include
+                android:id="@+id/il_is_repair"
+                layout="@layout/layout_info_item"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp" />
+
+            <include
+                android:id="@+id/il_fee"
+                layout="@layout/layout_info_item"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp" />
+
+            <include
+                android:id="@+id/il_customer_signature"
+                layout="@layout/layout_info_item"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp" />
+
+            <include
+                android:id="@+id/il_engineer_id"
+                layout="@layout/layout_info_item"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

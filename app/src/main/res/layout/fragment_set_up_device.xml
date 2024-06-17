@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context=".ui.main.pair.user.SetUpDeviceFragment">
+
+    <include
+        android:id="@+id/il_toolbar"
+        layout="@layout/layout_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@id/bt_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/il_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_device"
+                android:layout_width="136dp"
+                android:layout_height="136dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="52dp"
+                android:src="@drawable/ic_device_tmp" />
+
+            <TextView
+                android:id="@+id/tv_model_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:includeFontPadding="false"
+                android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                android:textColor="@color/colorSecondary"
+                tools:text="HM-190 冰溫熱三溫桌上型飲水機" />
+
+            <TextView
+                android:id="@+id/tv_mac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:includeFontPadding="false"
+                android:textAppearance="@style/TextAppearance.HAOHSING.Body2"
+                android:textColor="#666666"
+                tools:text="MAC:XXXXX" />
+
+            <TextView
+                android:id="@+id/tv_sn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:includeFontPadding="false"
+                android:textAppearance="@style/TextAppearance.HAOHSING.Body2"
+                android:textColor="#666666"
+                tools:text="序號:XXXXX" />
+
+            <include
+                android:id="@+id/il_name"
+                layout="@layout/layout_info_item"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="40dp" />
+
+            <include
+                android:id="@+id/il_place"
+                layout="@layout/layout_info_item"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp" />
+
+            <include
+                android:id="@+id/il_area"
+                layout="@layout/layout_info_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <include
+                android:id="@+id/il_service"
+                layout="@layout/layout_info_item"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp" />
+
+            <include
+                android:id="@+id/il_address"
+                layout="@layout/layout_info_item"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp" />
+
+            <include
+                android:id="@+id/il_customer"
+                layout="@layout/layout_info_item"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp" />
+
+            <FrameLayout
+                android:id="@+id/fl_warranty_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="保固註冊登錄"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                    android:textColor="@color/colorSecondary" />
+
+                <TextView
+                    android:id="@+id/tv_fill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:includeFontPadding="false"
+                    android:text="帶入註冊資料"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine5"
+                    android:textColor="@color/colorPrimary" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_warranty_info_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_r10_white"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/il_toolbar">
+
+                <FrameLayout
+                    android:id="@+id/fl_owner"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="所屬人"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tv_owner_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="36dp"
+                        android:includeFontPadding="false"
+                        android:text="請填寫"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+                        android:textColor="#666666" />
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:src="@drawable/ic_right_arrow" />
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:background="#3300356F" />
+
+                <LinearLayout
+                    android:id="@+id/fl_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="Email"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tv_owner_mail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:layout_marginEnd="8dp"
+                        android:text="請填寫"
+                        android:layout_weight="1"
+                        android:textAlignment="textEnd"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+                        android:textColor="#666666" />
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/ic_right_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:background="#3300356F" />
+
+                <FrameLayout
+                    android:id="@+id/fl_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="聯絡電話"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tv_owner_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="36dp"
+                        android:includeFontPadding="false"
+                        android:text="請填寫"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+                        android:textColor="#666666" />
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:src="@drawable/ic_right_arrow" />
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:background="#3300356F" />
+
+                <FrameLayout
+                    android:id="@+id/fl_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="購買日期"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="36dp"
+                        android:includeFontPadding="false"
+                        android:text="--年--月--日"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+                        android:textColor="#666666"
+                        tools:text="陳小明" />
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:src="@drawable/ic_right_arrow" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_warranty_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:includeFontPadding="false"
+                android:text="產品保固期將以機身序號所對應的出廠日期開始計算，12個月內提供保固，如需延展請聯繫經銷人員。"
+                android:textAppearance="@style/TextAppearance.HAOHSING.Body2"
+                android:textColor="#666666" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/bt_add"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="29dp"
+        android:layout_marginBottom="32dp"
+        android:includeFontPadding="false"
+        android:text="新增"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        android:id="@+id/il_loading"
+        layout="@layout/layout_loading"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/fl_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_custom_edittext"
+        app:layout_constraintBottom_toTopOf="@id/tv_error_note"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:paddingStart="26dp"
+        android:paddingEnd="21dp">
+
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            tools:src="@drawable/ic_email"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="12dp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:maxLines="1"
+            android:inputType=""
+            android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+            android:textColorHint="@color/colorGray"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorText"
+            android:saveEnabled="false"
+            android:layout_gravity="center_vertical|start" />
+
+        <ImageButton
+            android:id="@+id/bt_end"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center_vertical|end"
+            android:background="@null"
+            android:src="@drawable/ic_eye_close"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_error_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorRed"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fl_edittext"
+        tools:text="查無此帳號"
+        android:visibility="invisible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

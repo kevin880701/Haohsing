@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    xmlns:toos="http://schemas.android.com/tools"
+    android:background="@drawable/shape_r10_white"
+    android:foreground="?attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginHorizontal="17dp"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+        toos:text="一般家用" />
+
+</FrameLayout>

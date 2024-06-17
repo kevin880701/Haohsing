@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.user.devicedetail.DeviceDetailFragment">
+
+    <include
+        android:id="@+id/il_toolbar"
+        layout="@layout/layout_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/bt_trouble_shooting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:background="@null"
+        android:src="@drawable/ic_information"
+        app:layout_constraintBottom_toBottomOf="@id/il_toolbar"
+        app:layout_constraintEnd_toEndOf="@id/il_toolbar"
+        app:layout_constraintTop_toTopOf="@id/il_toolbar"
+        app:tint="@color/white" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/sv_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/il_toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorSecondary">
+
+            <FrameLayout
+                android:id="@+id/fl_device_header"
+                android:layout_width="match_parent"
+                android:layout_height="136dp"
+                android:layout_marginTop="9dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_device"
+                    android:layout_width="136dp"
+                    android:layout_height="136dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_device_tmp" />
+
+                <ImageButton
+                    android:id="@+id/bt_previous_device"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_marginStart="53dp"
+                    android:background="@null"
+                    android:src="@drawable/ic_left_arrow" />
+
+                <ImageButton
+                    android:id="@+id/bt_next_device"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="53dp"
+                    android:background="@null"
+                    android:src="@drawable/ic_right_arrow"
+                    app:tint="@color/white" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_device_model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine5"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fl_device_header"
+                tools:text="HS-600G" />
+
+            <TextView
+                android:id="@+id/tv_device_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_round_white"
+                android:backgroundTint="@color/colorRed"
+                android:includeFontPadding="false"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="4dp"
+                android:textAppearance="@style/TextAppearance.HAOHSING.Body2"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_device_model"
+                tools:text="水質異常" />
+
+            <TextView
+                android:id="@+id/tv_error_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+                android:textColor="@color/colorRed"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_device_status"
+                tools:text="#EP" />
+
+            <Button
+                android:id="@+id/bt_notify_manufacturer"
+                style="@style/Widget.NormalButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="29dp"
+                android:layout_marginTop="12dp"
+                android:includeFontPadding="false"
+                android:text="通知廠商"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_error_code" />
+
+            <include
+                android:id="@+id/il_water_info"
+                layout="@layout/layout_device_water_info"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="22dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bt_notify_manufacturer" />
+
+            <include
+                android:id="@+id/il_water_temp"
+                layout="@layout/layout_device_water_temp"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginHorizontal="18dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/il_water_info" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/shape_top_round_r12_f1f1f1"
+                android:orientation="vertical"
+                android:paddingHorizontal="19dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/il_water_temp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="濾芯資訊"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                    android:textColor="#1f1f1f" />
+
+                <include
+                    android:id="@+id/il_filter_wash"
+                    layout="@layout/layout_switch_item" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_filters"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/layout_info_item" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="設定"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                    android:textColor="#1f1f1f" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_normal_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="8"
+                    tools:listitem="@layout/layout_switch_item" />
+
+                <include
+                    android:id="@+id/il_advanced_setting"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+                    <TextView
+                        android:id="@+id/tv_log"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="紀錄"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                        android:textColor="#1f1f1f" />
+
+                    <TextView
+                        android:id="@+id/tv_no_maintain_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="距上次保養 100 天"
+                        android:layout_gravity="end|center_vertical"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.Body2"
+                        android:textColor="@color/colorLightGray" />
+
+                </FrameLayout>
+
+                <include
+                    android:id="@+id/il_maintenance_log"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_energy_log"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="資訊"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                    android:textColor="#1f1f1f" />
+
+                <include
+                    android:id="@+id/il_info_name"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" />
+
+                <include
+                    android:id="@+id/il_model_name"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_connect_status"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_r10_white"
+                    android:orientation="vertical"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="所屬機構與地址"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+                        android:textColor="#acacac" />
+
+                    <TextView
+                        android:id="@+id/tv_owner_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:includeFontPadding="false"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.Body2"
+                        android:textColor="#acacac"
+                        tools:text="豪星科技股份有限公司" />
+
+                    <TextView
+                        android:id="@+id/tv_owner_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:includeFontPadding="false"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.Body2"
+                        android:textColor="#acacac"
+                        tools:text="台中市烏日區高鐵五路166號" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/fl_place_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_r10_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|top"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="12dp"
+                        android:includeFontPadding="false"
+                        android:text="單位與區域"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tv_place_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|bottom"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginBottom="13dp"
+                        android:includeFontPadding="false"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.Body2"
+                        android:textColor="#acacac"
+                        tools:text="豪星大樓｜咖啡廳" />
+
+                    <ImageView
+                        android:id="@+id/iv_place_area_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginEnd="26dp"
+                        android:src="@drawable/ic_right_arrow" />
+
+                </FrameLayout>
+
+                <include
+                    android:id="@+id/il_share_device"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_manufacturer_info"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_require_maintenance"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_reset"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_warranty"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_manual"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="8dp" />
+
+                <Button
+                    android:id="@+id/bt_quit"
+                    style="@style/Widget.NormalRedButton.Outline"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginHorizontal="9dp"
+                    android:layout_marginTop="38dp"
+                    android:layout_marginBottom="13dp"
+                    android:includeFontPadding="false"
+                    android:text="刪除飲水機"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                    android:textColor="@color/color_normal_red_press_white" />
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/il_loading"
+        layout="@layout/layout_loading"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/il_toolbar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".ui.main.user.devicedetail.troubleshooting.TroubleShootingFragment">
+
+    <include
+        android:id="@+id/il_toolbar"
+        layout="@layout/layout_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:includeFontPadding="false"
+        android:text="簡易故障排除"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+        android:textColor="#1f1f1f"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/il_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/il_toolbar">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorLightBlue"
+            android:includeFontPadding="false"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="•顯示器及全部指示燈不亮"
+            android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+            android:textColor="@color/colorSecondary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="原因：電源未接通，主電源載保險絲。\n處理： 1. 請檢查是否停電？\n
+              2. 漏電斷路器是否開啟？\n
+              3. 插頭是否未插妥？\n
+              4. 保險絲更新？"
+            android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+            android:textColor="#1f1f1f" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorLightBlue"
+            android:includeFontPadding="false"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="•面板閃爍"
+            android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+            android:textColor="@color/colorSecondary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="原因：內部潮濕，機內管路零件漏水。\n處理：1. 下正板打開將底座水盤擦乾。\n
+             2. 查內部零件管線是否脫落。\n
+             3. 將漏水部門修復並將水盒擦乾。"
+            android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+            android:textColor="#1f1f1f" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/by_require_maintain"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="29dp"
+        android:layout_marginBottom="48dp"
+        android:includeFontPadding="false"
+        android:text="保養與維修需求"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

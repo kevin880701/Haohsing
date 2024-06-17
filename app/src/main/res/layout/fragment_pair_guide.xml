@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".ui.main.pair.PairGuideFragment">
+
+    <include
+        android:id="@+id/il_toolbar"
+        layout="@layout/layout_toolbar" />
+
+    <TextView
+        android:id="@+id/tv_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:includeFontPadding="false"
+        android:text="請掃描配對"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+        android:textColor="#1f1f1f"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/il_toolbar" />
+
+    <TextView
+        android:id="@+id/tv_scan_note1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="．掃描產品說明書上的配對行動條碼，進行綁定"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_scan"
+        android:includeFontPadding="false"
+        android:layout_marginTop="8dp"
+        android:textColor="#666666" />
+
+    <TextView
+        android:id="@+id/tv_scan_note2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="．無連網功能機型請手動輸入型號"
+        app:layout_constraintStart_toStartOf="@id/tv_scan_note1"
+        app:layout_constraintTop_toBottomOf="@id/tv_scan_note1"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine5"
+        android:includeFontPadding="false"
+        android:textColor="#666666" />
+
+    <ImageView
+        android:id="@+id/iv_qrcode_manual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_qrcode_manual"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_scan_note2"
+        android:layout_marginTop="48dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="說明書"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_qrcode_manual"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+        android:includeFontPadding="false"
+        android:textColor="#1f1f1f"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        android:id="@+id/bt_start_scan"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="30dp"
+        android:text="開始掃描"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+        android:includeFontPadding="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bt_input_model"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/bt_input_model"
+        style="@style/Widget.NormalButton.Outline"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="30dp"
+        android:text="手動輸入型號"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+        android:includeFontPadding="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="28dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

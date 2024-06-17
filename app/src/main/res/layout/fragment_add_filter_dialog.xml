@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".ui.main.engineer.main.taskform.AddFilterDialog">
+
+    <ImageView
+        android:layout_width="63dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/shape_round_acacac" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:includeFontPadding="false"
+        android:text="新增濾芯"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+        android:textColor="#343434" />
+
+    <TextView
+        android:id="@+id/tv_filter_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:includeFontPadding="false"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine1"
+        android:textColor="#343434"
+        tools:text="濾芯-1" />
+
+    <FrameLayout
+        android:id="@+id/fl_install_date"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/shape_r10_f3f3f3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:text="安裝日期"
+            android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_install_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="25dp"
+            android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+            android:textColor="@color/black"
+            tools:text="2022年12月12日" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_filter_life"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/shape_r10_f3f3f3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:text="剩餘壽命"
+            android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_filter_life"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="52dp"
+            android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+            android:textColor="@color/colorPrimary"
+            android:text="3個月" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="26dp"
+            android:src="@drawable/ic_right_arrow" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/bt_save"
+        style="@style/Widget.NormalButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginBottom="20dp"
+        android:includeFontPadding="false"
+        android:text="新增"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

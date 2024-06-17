@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_r10_white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="更換零件"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="控制類"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+        android:textColor="@color/colorPrimary" />
+
+    <com.clockworkorange.haohsing.ui.widget.MultiFormOptionSelectLayout
+        android:id="@+id/fl_items_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="加熱類"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+        android:textColor="@color/colorPrimary" />
+
+
+    <com.clockworkorange.haohsing.ui.widget.MultiFormOptionSelectLayout
+        android:id="@+id/fl_items_heat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="制冷類"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+        android:textColor="@color/colorPrimary" />
+
+    <com.clockworkorange.haohsing.ui.widget.MultiFormOptionSelectLayout
+        android:id="@+id/fl_items_cool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="管路類"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+        android:textColor="@color/colorPrimary" />
+
+    <com.clockworkorange.haohsing.ui.widget.MultiFormOptionSelectLayout
+        android:id="@+id/fl_items_pipeline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="RO機類"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+        android:textColor="@color/colorPrimary" />
+
+    <com.clockworkorange.haohsing.ui.widget.MultiFormOptionSelectLayout
+        android:id="@+id/fl_items_ro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+
+</LinearLayout>

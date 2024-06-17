@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".ui.main.user.devicedetail.workorderlog.WorkOrderLogFragment">
+
+    <include
+        android:id="@+id/il_toolbar"
+        layout="@layout/layout_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:includeFontPadding="false"
+        android:text="紀錄"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+        android:textColor="#1f1f1f"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/il_toolbar" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/cg_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="62dp"
+        app:singleLine="true"
+        app:chipSpacingHorizontal="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/il_toolbar"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_pending"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="96dp"
+            android:layout_height="32dp"
+            android:checked="true"
+            android:includeFontPadding="false"
+            android:text="待處理"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+            android:textColor="@color/color_normal_808080_check_white"
+            app:chipBackgroundColor="@color/color_normal_white_check_008ed3"
+            app:ensureMinTouchTargetSize="false" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_schedule"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="96dp"
+            android:layout_height="32dp"
+            android:includeFontPadding="false"
+            android:text="已安排"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+            android:textColor="@color/color_normal_808080_check_white"
+            app:chipBackgroundColor="@color/color_normal_white_check_008ed3"
+            app:ensureMinTouchTargetSize="false" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_finished"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="96dp"
+            android:layout_height="32dp"
+            android:includeFontPadding="false"
+            android:text="已結案"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+            android:textColor="@color/color_normal_808080_check_white"
+            app:chipBackgroundColor="@color/color_normal_white_check_008ed3"
+            app:ensureMinTouchTargetSize="false" />
+
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_items"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cg_type"
+        tools:listitem="@layout/listitem_work_order_info" />
+
+    <include
+        android:id="@+id/il_empty"
+        layout="@layout/layout_empty_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cg_type" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

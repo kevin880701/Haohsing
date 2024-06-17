@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_search"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:background="@drawable/shape_stroke_round_808080"
+    android:orientation="horizontal"
+    android:paddingHorizontal="17dp">
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_search" />
+
+    <TextView
+        android:id="@+id/tv_search_keyword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="32dp"
+        android:includeFontPadding="false"
+        android:text="搜尋"
+        android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+        android:textColor="#808080" />
+
+    <ImageButton
+        android:id="@+id/bt_clear_search"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical|end"
+        android:background="@null"
+        android:src="@drawable/ic_x"
+        android:visibility="gone" />
+
+</FrameLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:minHeight="248dp"
+    android:background="@drawable/shape_r10_white">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:text="型號"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tv_model"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+            android:includeFontPadding="false"
+            android:textColor="#666666"
+            android:layout_gravity="end"
+            tools:text="HM-190"
+            android:gravity="center_vertical" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:background="#3300356F" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:text="MAC"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tv_mac"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+            android:includeFontPadding="false"
+            android:textColor="#666666"
+            android:layout_gravity="end"
+            tools:text="123424532"
+            android:gravity="center_vertical" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:background="#3300356F" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:text="地區/機構"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tv_place"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+            android:includeFontPadding="false"
+            android:textColor="#666666"
+            android:layout_gravity="end"
+            tools:text="台中市烏日區\n橘子公司"
+            android:gravity="center_vertical|end" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:background="#3300356F" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:text="安裝時間"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+            android:includeFontPadding="false"
+            android:textColor="#666666"
+            android:layout_gravity="end"
+            tools:text="2022年12月28日\n13:35"
+            android:gravity="center_vertical|end" />
+
+    </FrameLayout>
+
+</LinearLayout>

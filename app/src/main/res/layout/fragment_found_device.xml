@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:orientation="vertical"
+        tools:context=".ui.main.pair.FoundDeviceFragment">
+
+        <include
+            android:id="@+id/il_toolbar"
+            layout="@layout/layout_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp" />
+
+
+        <ImageView
+            android:id="@+id/iv_device"
+            android:layout_width="136dp"
+            android:layout_height="136dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="52dp"
+            android:src="@drawable/ic_device_tmp" />
+
+        <TextView
+            android:id="@+id/tv_model_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:includeFontPadding="false"
+            android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+            android:textColor="@color/colorSecondary"
+            tools:text="HM-190 冰溫熱三溫桌上型飲水機" />
+
+        <TextView
+            android:id="@+id/tv_mac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAppearance="@style/TextAppearance.HAOHSING.Body2"
+            tools:text="MAC:XXXXX"
+            android:includeFontPadding="false"
+            android:textColor="#666666" />
+
+        <TextView
+            android:id="@+id/tv_sn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAppearance="@style/TextAppearance.HAOHSING.Body2"
+            tools:text="序號:XXXXX"
+            android:includeFontPadding="false"
+            android:textColor="#666666" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/il_loading"
+        layout="@layout/layout_loading"
+        android:visibility="gone" />
+
+</FrameLayout>

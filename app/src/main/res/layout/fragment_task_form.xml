@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:animateLayoutChanges="true"
+    tools:context=".ui.main.engineer.main.taskform.TaskFormFragment">
+
+    <include
+        android:id="@+id/il_toolbar"
+        layout="@layout/layout_toolbar_white" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp">
+
+            <FrameLayout
+                android:id="@+id/fl_maintain"
+                android:layout_width="match_parent"
+                android:layout_height="62dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="保養"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                    android:textColor="#1f1f1f" />
+
+                <ImageButton
+                    android:id="@+id/bt_expand_maintain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:background="@null"
+                    android:src="@drawable/ic_arrow_up" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_maintain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="16dp">
+
+                <include
+                    android:id="@+id/il_tds"
+                    layout="@layout/layout_info_item" />
+
+                <include
+                    android:id="@+id/il_check_tds"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_select_change_filter"
+                    layout="@layout/layout_multi_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_filter_1"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/il_filter_2"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/il_filter_3"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/il_filter_ro"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/il_filter_5"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/il_select_basic_maintain"
+                    layout="@layout/layout_multi_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:includeFontPadding="false"
+                    android:text="上傳照片"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                    android:textColor="#1f1f1f" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="•安裝完畢後，請上傳各項目照片。\n•每筆照片最多可為10MB。"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+                    android:textColor="#666666" />
+
+                <include
+                    android:id="@+id/il_photo_old_filter"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_photos_old_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/il_photo_new_filter"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_photos_new_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider_maintain"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#acacac" />
+
+            <FrameLayout
+                android:id="@+id/fl_repair"
+                android:layout_width="match_parent"
+                android:layout_height="62dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="維修"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                    android:textColor="#1f1f1f" />
+
+                <ImageButton
+                    android:id="@+id/bt_expand_repair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:background="@null"
+                    android:src="@drawable/ic_arrow_up" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_repair"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="16dp">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/cg_repair_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_error_reason"
+                        style="@style/Widget.SelectTagChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="異常原因" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_repair_content"
+                        style="@style/Widget.SelectTagChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="維修內容" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_change_parts"
+                        style="@style/Widget.SelectTagChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="更換零件" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+
+                <include
+                    android:id="@+id/il_select_error_code"
+                    layout="@layout/layout_multi_select"
+                    android:visibility="visible" />
+
+                <include
+                    android:id="@+id/il_select_repair_content"
+                    layout="@layout/layout_multi_select"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/il_select_change_parts"
+                    layout="@layout/layout_select_change_parts"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:includeFontPadding="false"
+                    android:text="上傳照片"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                    android:textColor="#1f1f1f" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="•安裝完畢後，請上傳各項目照片。\n•每筆照片最多可為10MB。"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+                    android:textColor="#666666" />
+
+                <include
+                    android:id="@+id/il_photo_new_parts"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_photos_new_parts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/il_photo_old_parts"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_photos_old_parts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider_repair"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#acacac" />
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="62dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="確認項目"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                    android:textColor="#1f1f1f" />
+
+                <ImageButton
+                    android:id="@+id/bt_expand_confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:background="@null"
+                    android:src="@drawable/ic_arrow_up" />
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="16dp"
+                android:visibility="visible">
+
+                <include
+                    android:id="@+id/il_quotation"
+                    layout="@layout/layout_info_item" />
+
+                <include
+                    android:id="@+id/il_is_repair"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_reject_repair_reason"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_r10_white"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="拒絕維修原因"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/tv_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:layout_marginTop="4dp"
+                        android:hint="填寫原因"
+                        android:background="@null"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+                        android:textColor="#666666" />
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/il_fee"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_customer_signature"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_engineer_id"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/bt_finish"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="40dp"
+                android:includeFontPadding="false"
+                android:text="完成，結案" />
+
+            <Button
+                android:id="@+id/bt_need_quotation"
+                style="@style/Widget.NormalButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/colorSecondary"
+                android:includeFontPadding="false"
+                android:text="需報價，重新派單" />
+
+            <Button
+                android:id="@+id/bt_report_error"
+                style="@style/Widget.NormalRedButton.Outline"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp"
+                android:includeFontPadding="false"
+                android:text="回報異常"
+                android:textColor="@color/color_normal_red_press_white" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/il_loading"
+        layout="@layout/layout_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</FrameLayout>

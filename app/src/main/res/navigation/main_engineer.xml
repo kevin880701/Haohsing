@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_engineer"
+    app:startDestination="@id/engineerMainNavFragment">
+
+    <include app:graph="@navigation/engineer_pair_device" />
+
+    <action
+        android:id="@+id/action_nav_to_engineer_pair_device"
+        app:destination="@id/engineer_pair_device" />
+
+    <fragment
+        android:id="@+id/engineerMainNavFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.engineer.EngineerMainNavFragment"
+        android:label="fragment_engineer_main_nav"
+        tools:layout="@layout/fragment_engineer_main_nav">
+        <action
+            android:id="@+id/action_engineerMainNavFragment_to_taskDetailFragment"
+            app:destination="@id/taskDetailFragment" />
+        <action
+            android:id="@+id/action_engineerMainNavFragment_to_taskDetailInstallFragment"
+            app:destination="@id/taskDetailInstallFragment" />
+        <action
+            android:id="@+id/action_engineerMainNavFragment_to_engineerTransferOwnerFragment"
+            app:destination="@id/engineerTransferOwnerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/accountSettingFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.account.AccountSettingFragment"
+        android:label="fragment_account_setting"
+        tools:layout="@layout/fragment_account_setting" />
+    <fragment
+        android:id="@+id/termFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.account.TermFragment"
+        android:label="TermFragment" >
+        <argument
+            android:name="title"
+            app:argType="string"/>
+        <argument
+            android:name="url"
+            app:argType="string"/>
+    </fragment>
+    <fragment
+        android:id="@+id/taskDetailFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.engineer.main.taskdetail.TaskDetailFragment"
+        android:label="fragment_task_detail"
+        tools:layout="@layout/fragment_task_detail">
+        <argument
+            android:name="task_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_taskDetailFragment_to_taskFormFragment"
+            app:destination="@id/taskFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskFormFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.engineer.main.taskform.TaskFormFragment"
+        android:label="fragment_task_form"
+        tools:layout="@layout/fragment_task_form">
+        <argument
+            android:name="task_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskDetailInstallFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.engineer.main.taskdetailinstall.TaskDetailInstallFragment"
+        android:label="fragment_task_detail_install"
+        tools:layout="@layout/fragment_task_detail_install">
+        <argument
+            android:name="task_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/engineerTransferOwnerFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.engineer.install.EngineerTransferOwnerFragment"
+        android:label="EngineerTransferOwnerFragment"
+        tools:layout="@layout/fragment_engineer_transfer_owner"/>
+
+</navigation>

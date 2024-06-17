@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/shape_r10_f3f3f3">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceBody1"
+        tools:text="OFFICE"
+        android:layout_gravity="center_vertical|start"
+        android:layout_marginStart="15dp" />
+
+    <TextView
+        android:id="@+id/tv_connected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已連線"
+        android:textAppearance="?attr/textAppearanceBody2"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginEnd="53dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_signal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/ic_wifi_4" />
+
+</FrameLayout>

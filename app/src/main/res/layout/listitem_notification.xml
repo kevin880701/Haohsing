@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/shape_r10_white">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_icon_background"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:background="#f1f1f1"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundedCorner" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_unread"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:background="@color/colorRed"
+        app:layout_constraintEnd_toEndOf="@id/iv_icon_background"
+        app:layout_constraintTop_toTopOf="@id/iv_icon_background"
+        app:shapeAppearanceOverlay="@style/RoundedCorner" />
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/iv_icon_background"
+        app:layout_constraintEnd_toEndOf="@id/iv_icon_background"
+        app:layout_constraintTop_toTopOf="@id/iv_icon_background"
+        app:layout_constraintBottom_toBottomOf="@id/iv_icon_background"
+        android:src="@drawable/ic_paper_airplane"
+        android:layout_margin="7dp" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine5"
+        android:includeFontPadding="false"
+        tools:text="Frank 邀請您使用飲水機"
+        android:textColor="#666666"
+        app:layout_constraintStart_toEndOf="@id/iv_icon_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_content"
+        android:layout_marginStart="12dp"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.HAOHSING.Body2"
+        app:layout_constraintStart_toEndOf="@id/iv_icon_background"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_arrow"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        tools:text="11:00 ｜ 長榮桂冠 - 拒絕"
+        android:textColor="#acacac"
+        android:layout_marginStart="12dp" />
+
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_right_arrow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="25dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

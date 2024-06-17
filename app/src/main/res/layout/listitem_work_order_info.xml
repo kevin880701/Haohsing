@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:background="@drawable/shape_r10_white">
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|top"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:includeFontPadding="false"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+        android:textColor="@color/black"
+        tools:text="維修" />
+
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|bottom"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="13dp"
+        android:includeFontPadding="false"
+        android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+        android:textColor="#808080"
+        tools:text="2022年03月10日" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginEnd="26dp"
+        android:src="@drawable/ic_right_arrow" />
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="60dp"
+        android:layout_height="28dp"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginEnd="55dp"
+        android:background="@drawable/shape_round_bad6fb"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textAppearance="@style/TextAppearance.HAOHSING.Body2"
+        android:textColor="@color/colorPrimary"
+        tools:text="待處理" />
+
+</FrameLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_r10_white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="備註說明"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+        android:textColor="@color/black" />
+
+    <com.clockworkorange.haohsing.ui.widget.MultiFormOptionSelectLayout
+        android:id="@+id/fl_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/et_other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_r4_f1f1f1"
+        android:hint="填寫其他"
+        android:includeFontPadding="false"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="4dp"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_pair_device"
+    app:startDestination="@id/userPairGuideFragment">
+
+    <fragment
+        android:id="@+id/userPairGuideFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.pair.UserPairGuideFragment"
+        android:label="fragment_pair_guide"
+        tools:layout="@layout/fragment_pair_guide">
+        <action
+            android:id="@+id/action_userPairGuideFragment_to_scanQRCodeFragment"
+            app:destination="@id/userScanQRCodeFragment" />
+        <action
+            android:id="@+id/action_userPairGuideFragment_to_setUpTraditionalDeviceFragment"
+            app:destination="@id/user_manual_pair" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userScanQRCodeFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.pair.UserScanQRCodeFragment"
+        android:label="fragment_scan_q_r_code"
+        tools:layout="@layout/fragment_scan_q_r_code">
+        <action
+            android:id="@+id/action_userScanQRCodeFragment_to_userFoundDeviceFragment"
+            app:destination="@id/userFoundDeviceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFoundDeviceFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.pair.UserFoundDeviceFragment"
+        android:label="UserFoundDeviceFragment"
+        tools:layout="@layout/fragment_found_device">
+        <action
+            android:id="@+id/action_userFoundDeviceFragment_to_setUpWiFiFragment"
+            app:destination="@id/setUpWiFiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setUpWiFiFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.pair.user.UserSetUpWiFiFragment"
+        android:label="fragment_set_up_wi_fi"
+        tools:layout="@layout/fragment_set_up_wi_fi">
+        <action
+            android:id="@+id/action_setUpWiFiFragment_to_setUpDeviceFragment"
+            app:destination="@id/setUpDeviceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setUpDeviceFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.pair.user.UserSetUpDeviceFragment"
+        android:label="fragment_set_up_device"
+        tools:layout="@layout/fragment_set_up_device">
+        <action
+            android:id="@+id/action_setUpDeviceFragment_to_userPairSuccessFragment"
+            app:destination="@id/userPairSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userPairSuccessFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.pair.UserPairSuccessFragment"
+        android:label="UserPairSuccessFragment"
+        tools:layout="@layout/fragment_pair_success"/>
+
+
+    <navigation android:id="@+id/user_manual_pair"
+        app:startDestination="@id/setUpTraditionalDeviceFragment">
+        <fragment
+            android:id="@+id/setUpTraditionalDeviceFragment"
+            android:name="com.clockworkorange.haohsing.ui.main.pair.UserSetUpTraditionalDeviceFragment"
+            android:label="SetUpTraditionalDeviceFragment"
+            tools:layout="@layout/fragment_set_up_traditional_device">
+            <action
+                android:id="@+id/action_setUpTraditionalDeviceFragment_to_selectVendorFragment"
+                app:destination="@id/selectVendorFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/selectVendorFragment"
+            android:name="com.clockworkorange.haohsing.ui.main.pair.SelectVendorFragment"
+            android:label="SelectVendorFragment"
+            tools:layout="@layout/fragment_select_with_search" />
+    </navigation>
+
+</navigation>

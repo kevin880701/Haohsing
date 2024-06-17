@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal"
+    tools:background="@color/colorBackground">
+
+    <ImageButton
+        android:id="@+id/bt_delete"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_x"
+        android:background="@null" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/shape_r10_white">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginStart="16dp"
+            android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+            android:textColor="@color/black"
+            tools:text="辦公室" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="23dp"
+            android:src="@drawable/ic_right_arrow" />
+
+    </FrameLayout>
+
+</LinearLayout>

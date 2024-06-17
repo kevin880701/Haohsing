@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomEditText">
+        <attr name="hint" format="string" />
+        <attr name="headIcon" format="reference" />
+        <attr name="inputType">
+            <enum name="Text" value="0" />
+            <enum name="Email" value="1" />
+            <enum name="Password" value="2" />
+        </attr>
+        <attr name="endButtonType">
+            <enum name="ClearText" value="0" />
+            <enum name="DisplayPassword" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

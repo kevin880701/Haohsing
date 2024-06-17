@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:orientation="vertical"
+        tools:context=".ui.main.pair.engineer.PairDeviceInspectionFragment">
+
+        <include
+            android:id="@+id/il_toolbar"
+            layout="@layout/layout_toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="24dp"
+                    android:includeFontPadding="false"
+                    android:text="請確認飲水機運作正常"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                    android:textColor="#1f1f1f" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:includeFontPadding="false"
+                    android:text="請巡檢以下項目"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.Body2"
+                    android:textColor="#666666" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:includeFontPadding="false"
+                    android:text="水源"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                    android:textColor="#1f1f1f" />
+
+                <include
+                    android:id="@+id/il_tds"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_water_pressure"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_check_relief_valve"
+                    layout="@layout/layout_check_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:includeFontPadding="false"
+                    android:text="電源"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                    android:textColor="#1f1f1f" />
+
+                <include
+                    android:id="@+id/il_voltage"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_check_ground"
+                    layout="@layout/layout_check_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="排水"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                        android:textColor="#1f1f1f" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:includeFontPadding="false"
+                        android:text="勾選狀態"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.Body2"
+                        android:textColor="#acacac" />
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/il_select_drain_smooth"
+                    layout="@layout/layout_select_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_select_drain_puddle"
+                    layout="@layout/layout_select_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_select_drain_overflow"
+                    layout="@layout/layout_select_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:includeFontPadding="false"
+                    android:text="安裝RO機"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                    android:textColor="#1f1f1f" />
+
+                <include
+                    android:id="@+id/il_install_ro_filter"
+                    layout="@layout/layout_check_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_check_ro_work"
+                    layout="@layout/layout_check_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="安裝"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                        android:textColor="#1f1f1f" />
+
+                    <Button
+                        android:id="@+id/bt_add_filter"
+                        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:includeFontPadding="false"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:text="新增濾芯"
+                        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine5"
+                        app:icon="@drawable/ic_add"
+                        app:iconGravity="end"
+                        app:iconSize="10dp" />
+
+                </FrameLayout>
+
+                <include
+                    android:id="@+id/il_filter_1"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_filter_2"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/il_filter_3"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/il_filter_4"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/il_filter_5"
+                    layout="@layout/layout_info_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:includeFontPadding="false"
+                    android:text="飲水機功能"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                    android:textColor="#1f1f1f" />
+
+                <include
+                    android:id="@+id/il_check_intake_water_work"
+                    layout="@layout/layout_check_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_check_out_water_work"
+                    layout="@layout/layout_check_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_check_heat_work"
+                    layout="@layout/layout_check_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_check_cool_work"
+                    layout="@layout/layout_check_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_check_function_work"
+                    layout="@layout/layout_check_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:includeFontPadding="false"
+                    android:text="向客戶說明"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                    android:textColor="#1f1f1f" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:includeFontPadding="false"
+                    android:text="詳細說明產品使用與注意事項，並將說明書交予客戶。"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+                    android:textColor="#666666" />
+
+                <include
+                    android:id="@+id/il_check_power_plug"
+                    layout="@layout/layout_check_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_check_power_switch"
+                    layout="@layout/layout_check_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_check_water_switch"
+                    layout="@layout/layout_check_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_check_basic_function"
+                    layout="@layout/layout_check_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_check_basic_maintain"
+                    layout="@layout/layout_check_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_check_connect_service"
+                    layout="@layout/layout_check_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_check_guide"
+                    layout="@layout/layout_check_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:includeFontPadding="false"
+                    android:text="上傳照片"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                    android:textColor="#1f1f1f" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:includeFontPadding="false"
+                    android:text="•安裝完畢後，請上傳各項目照片。\n•每筆照片最多可為10MB。"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine4"
+                    android:textColor="#666666" />
+
+                <include
+                    android:id="@+id/il_photo_product"
+                    layout="@layout/layout_select_photo_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_photo_faucet"
+                    layout="@layout/layout_select_photo_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_photo_breaker"
+                    layout="@layout/layout_select_photo_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" />
+
+                <include
+                    android:id="@+id/il_photo_water_pressure_gauge"
+                    layout="@layout/layout_select_photo_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginBottom="48dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/bt_cancel"
+                        style="@style/Widget.NormalWhiteButton"
+                        android:layout_width="88dp"
+                        android:layout_height="match_parent"
+                        android:includeFontPadding="false"
+                        android:text="@string/cancel"
+                        android:textColor="#666666" />
+
+                    <Button
+                        android:id="@+id/bt_next"
+                        style="@style/Widget.NormalButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:includeFontPadding="false"
+                        android:text="下一步" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/il_loading"
+        layout="@layout/layout_loading"
+        android:visibility="gone" />
+
+</FrameLayout>

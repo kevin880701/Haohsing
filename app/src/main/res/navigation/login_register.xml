@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_register"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.clockworkorange.haohsing.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_forgetPasswordFragment"
+            app:destination="@id/forgetPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerAccountFragment"
+            app:destination="@id/registerAccountFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgetPasswordFragment"
+        android:name="com.clockworkorange.haohsing.ui.login.ForgetPasswordFragment"
+        android:label="fragment_forget_password"
+        tools:layout="@layout/fragment_forget_password">
+        <argument
+            android:name="mail"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerAccountFragment"
+        android:name="com.clockworkorange.haohsing.ui.login.RegisterAccountFragment"
+        android:label="fragment_register_account"
+        tools:layout="@layout/fragment_register_account">
+        <action
+            android:id="@+id/action_registerAccountFragment_to_verifyRegisterCodeFragment"
+            app:destination="@id/verifyRegisterCodeFragment" />
+        <action
+            android:id="@+id/action_registerAccountFragment_to_setupPasswordFragment"
+            app:destination="@id/setupPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyRegisterCodeFragment"
+        android:name="com.clockworkorange.haohsing.ui.login.VerifyRegisterCodeFragment"
+        android:label="fragment_verify_register_code"
+        tools:layout="@layout/fragment_verify_register_code">
+        <action
+            android:id="@+id/action_verifyRegisterCodeFragment_to_setupPasswordFragment"
+            app:destination="@id/setupPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setupPasswordFragment"
+        android:name="com.clockworkorange.haohsing.ui.login.SetupPasswordFragment"
+        android:label="fragment_setup_password"
+        tools:layout="@layout/fragment_setup_password">
+        <action
+            android:id="@+id/action_setupPasswordFragment_to_privacyFragment"
+            app:destination="@id/privacyFragment" />
+        <action
+            android:id="@+id/action_setupPasswordFragment_to_registerSuccessFragment"
+            app:destination="@id/registerSuccessFragment"
+            app:popUpTo="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="com.clockworkorange.haohsing.ui.login.PrivacyFragment"
+        android:label="fragment_privacy"
+        tools:layout="@layout/fragment_privacy" />
+    <fragment
+        android:id="@+id/registerSuccessFragment"
+        android:name="com.clockworkorange.haohsing.ui.login.RegisterSuccessFragment"
+        android:label="fragment_register_success"
+        tools:layout="@layout/fragment_register_success" />
+
+</navigation>

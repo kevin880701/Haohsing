@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSecondary"
+    tools:context=".ui.main.engineer.main.EngineerMainFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:padding="1dp"
+        android:background="@color/colorLightGray"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundedCorner" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine2"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/iv_image"
+        app:layout_constraintStart_toEndOf="@id/iv_image"
+        app:layout_constraintTop_toTopOf="@id/iv_image"
+        tools:text="技術員 張小明" />
+
+
+    <ImageButton
+        android:id="@+id/bt_add"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="20dp"
+        android:background="@null"
+        android:src="@drawable/ic_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="80dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/fl_candler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/shape_r18_white"
+                android:minHeight="350dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:includeFontPadding="false"
+                    android:text="日程表"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine2"
+                    android:textColor="@color/colorSecondary" />
+
+
+                <Button
+                    android:id="@+id/bt_today"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|end"
+                    android:includeFontPadding="false"
+                    android:text="今天"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    app:mcv_arrowColor="#666666"
+                    app:mcv_dateTextAppearance="@style/TextAppearance.Calendar.Date"
+                    app:mcv_headerTextAppearance="@style/TextAppearance.Calendar.Header"
+                    app:mcv_leftArrowMask="@drawable/ic_calendar_left_arrow"
+                    app:mcv_rightArrowMask="@drawable/ic_calendar_right_arrow"
+                    app:mcv_selectionColor="@color/colorPrimary"
+                    app:mcv_showOtherDates="other_months"
+                    app:mcv_tileHeight="35dp"
+                    app:mcv_weekDayLabels="@array/week_day_label"
+                    app:mcv_weekDayTextAppearance="@style/TextAppearance.Calendar.WeekDay" />
+
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/shape_top_round_r12_f1f1f1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fl_candler">
+
+                <TextView
+                    android:id="@+id/tv_unfinished"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/shape_round_white"
+                    android:includeFontPadding="false"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="4dp"
+                    android:text="未完成"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+                    android:textColor="#808080"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_finished"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/shape_round_white"
+                    android:includeFontPadding="false"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="4dp"
+                    android:text="已完成"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+                    android:textColor="#808080"
+                    app:layout_constraintStart_toEndOf="@id/tv_unfinished"
+                    app:layout_constraintTop_toTopOf="@id/tv_unfinished" />
+
+                <TextView
+                    android:id="@+id/tv_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/shape_round_white"
+                    android:includeFontPadding="false"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="4dp"
+                    android:text="回報異常"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+                    android:textColor="#808080"
+                    app:layout_constraintStart_toEndOf="@id/tv_finished"
+                    app:layout_constraintTop_toTopOf="@id/tv_finished" />
+
+                <TextView
+                    android:id="@+id/tv_task_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="23dp"
+                    android:includeFontPadding="false"
+                    android:text="任務列表"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_unfinished" />
+
+                <TextView
+                    android:id="@+id/tv_task_list_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="19dp"
+                    android:includeFontPadding="false"
+                    android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+                    android:textColor="#666666"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_task_list"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_task_list"
+                    tools:text="2022.03.22" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_task"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="150dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="19dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_task_list"
+                    tools:listitem="@layout/listitem_task_summary" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

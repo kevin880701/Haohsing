@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.NormalButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.HAOHSING.HeadLine3</item>
+        <item name="shapeAppearance">@style/Shape.NormalButton</item>
+        <item name="backgroundTint">@color/button_background_tint</item>
+    </style>
+
+    <style name="Widget.NormalButton.Outline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.HAOHSING.HeadLine3</item>
+        <item name="shapeAppearance">@style/Shape.NormalButton</item>
+        <item name="strokeColor">@color/button_background_tint</item>
+    </style>
+
+    <style name="Widget.NormalRedButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.HAOHSING.HeadLine3</item>
+        <item name="shapeAppearance">@style/Shape.NormalButton</item>
+        <item name="backgroundTint">@color/colorRed</item>
+    </style>
+
+    <style name="Widget.NormalWhiteButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.HAOHSING.HeadLine3</item>
+        <item name="shapeAppearance">@style/Shape.NormalButton</item>
+        <item name="backgroundTint">@color/white</item>
+    </style>
+
+    <style name="Widget.NormalRedButton.Outline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.HAOHSING.HeadLine3</item>
+        <item name="shapeAppearance">@style/Shape.NormalButton</item>
+        <item name="strokeColor">@color/colorRed</item>
+        <item name="backgroundTint">@color/press_red</item>
+        <item name="rippleColor">@color/transparent</item>
+    </style>
+
+    <style name="Shape.NormalButton" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="Widget.NegativeButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@drawable/bg_negative_button</item>
+        <item name="android:textColor">@color/color_negative_text</item>
+        <item name="android:textAppearance">@style/TextAppearance.HAOHSING.HeadLine3</item>
+    </style>
+
+    <style name="CustomRoundBottomSheetDialogStyle" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomRoundBottomSheetModal</item>
+    </style>
+
+    <style name="CustomRoundBottomSheetModal" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/shape_top_round_r10_white</item>
+    </style>
+
+    <style name="UpRoundShape">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopLeft">10dp</item>
+        <item name="cornerSizeTopRight">10dp</item>
+    </style>
+
+    <style name="RoundedCorner">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Widget.SelectTagChip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="shapeAppearanceOverlay">@style/RoundedCorner</item>
+        <item name="chipStartPadding">15dp</item>
+        <item name="chipEndPadding">15dp</item>
+        <item name="android:textColor">@color/chip_text_color</item>
+        <item name="android:textAppearance">@style/TextAppearance.HAOHSING.HeadLine4</item>
+        <item name="chipBackgroundColor">@color/chip_background_color</item>
+    </style>
+
+    <style name="Widget.SelectFailScenarioTextView" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.HAOHSING.Body1</item>
+        <item name="android:background">@drawable/shape_r4_f1f1f1</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:textColor">@color/colorSecondary</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+</resources>

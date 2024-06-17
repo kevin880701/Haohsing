@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="262dp" />
+
+    <View
+        android:layout_width="63dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_round_acacac" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="48dp"
+        android:includeFontPadding="false"
+        android:text="星期"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+        android:textColor="@color/colorText" />
+
+    <TextView
+        android:id="@+id/tv_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="14dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/finished"
+        android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+        android:textColor="@color/colorPrimary" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/tv_sun"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/bg_select_weekday"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textOn="日"
+            android:textOff="日"
+            android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+            android:textColor="@color/select_weekday_text_color" />
+
+        <ToggleButton
+            android:id="@+id/tv_mon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/bg_select_weekday"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textOn="一"
+            android:textOff="一"
+            android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+            android:textColor="@color/select_weekday_text_color" />
+
+        <ToggleButton
+            android:id="@+id/tv_tue"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/bg_select_weekday"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textOn="二"
+            android:textOff="二"
+            android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+            android:textColor="@color/select_weekday_text_color" />
+
+        <ToggleButton
+            android:id="@+id/tv_wed"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/bg_select_weekday"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textOn="三"
+            android:textOff="三"
+            android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+            android:textColor="@color/select_weekday_text_color" />
+
+        <ToggleButton
+            android:id="@+id/tv_thu"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/bg_select_weekday"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textOn="四"
+            android:textOff="四"
+            android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+            android:textColor="@color/select_weekday_text_color" />
+
+        <ToggleButton
+            android:id="@+id/tv_fri"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/bg_select_weekday"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textOn="五"
+            android:textOff="五"
+            android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+            android:textColor="@color/select_weekday_text_color" />
+
+        <ToggleButton
+            android:id="@+id/tv_sat"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_select_weekday"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textOn="六"
+            android:textOff="六"
+            android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+            android:textColor="@color/select_weekday_text_color" />
+
+    </LinearLayout>
+
+</FrameLayout>

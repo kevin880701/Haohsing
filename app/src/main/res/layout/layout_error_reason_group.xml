@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_group_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="熱水"
+        android:textAppearance="@style/TextAppearance.HAOHSING.Body1"
+        android:textColor="@color/black" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/fl_group_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:alignContent="stretch"
+        app:alignItems="stretch"
+        app:dividerDrawable="@drawable/shape_flexbox_divider"
+        app:flexWrap="wrap"
+        app:showDivider="middle">
+
+        <!--                <TextView-->
+        <!--                    style="@style/Widget.SelectFailScenarioTextView"-->
+        <!--                    android:text="不出水" />-->
+
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+</LinearLayout>

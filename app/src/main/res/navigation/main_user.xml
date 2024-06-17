@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_user"
+    app:startDestination="@id/userMainFragment">
+
+    <include app:graph="@navigation/user_pair_device" />
+
+    <action
+        android:id="@+id/action_nav_to_user_pair_device"
+        app:destination="@id/user_pair_device" />
+
+    <fragment
+        android:id="@+id/userMainFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.UserMainNavFragment"
+        android:label="fragment_user_main"
+        tools:layout="@layout/fragment_user_main_nav"/>
+
+    <fragment
+        android:id="@+id/accountSettingFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.account.AccountSettingFragment"
+        android:label="fragment_account_setting"
+        tools:layout="@layout/fragment_account_setting" />
+    <fragment
+        android:id="@+id/placeManagementFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.placemanagement.place.PlaceManagementFragment"
+        android:label="fragment_place_management"
+        tools:layout="@layout/fragment_place_management">
+        <action
+            android:id="@+id/action_placeManagementFragment_to_areaManagementFragment"
+            app:destination="@id/areaManagementFragment" />
+        <action
+            android:id="@+id/action_placeManagementFragment_to_placeDeviceShareMemberFragment"
+            app:destination="@id/placeDeviceShareMemberFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/areaManagementFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.placemanagement.area.AreaManagementFragment"
+        android:label="AreaManagementFragment">
+        <argument
+            android:name="place_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/deviceDetailFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.devicedetail.DeviceDetailFragment"
+        android:label="fragment_device_detail"
+        tools:layout="@layout/fragment_device_detail">
+        <argument
+            android:name="device_id_list"
+            app:argType="integer[]" />
+        <argument
+            android:name="device_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_deviceDetailFragment_to_troubleShootingFragment"
+            app:destination="@id/troubleShootingFragment" />
+        <action
+            android:id="@+id/action_deviceDetailFragment_to_manufacturerInfoFragment"
+            app:destination="@id/manufacturerInfoFragment" />
+        <action
+            android:id="@+id/action_deviceDetailFragment_to_warrantyInfoFragment"
+            app:destination="@id/warrantyInfoFragment" />
+        <action
+            android:id="@+id/action_deviceDetailFragment_to_placeAreaFragment"
+            app:destination="@id/placeAreaFragment" />
+        <action
+            android:id="@+id/action_deviceDetailFragment_to_requireMaintainFragment"
+            app:destination="@id/requireMaintainFragment" />
+        <action
+            android:id="@+id/action_deviceDetailFragment_to_workOrderLogFragment"
+            app:destination="@id/workOrderLogFragment" />
+        <action
+            android:id="@+id/action_deviceDetailFragment_to_shareMemberFragment"
+            app:destination="@id/shareMemberFragment" />
+        <action
+            android:id="@+id/action_deviceDetailFragment_to_advancedSettingFragment"
+            app:destination="@id/advancedSettingFragment" />
+        <action
+            android:id="@+id/action_deviceDetailFragment_to_resetWifiFragment"
+            app:destination="@id/resetWifiFragment" />
+        <action
+            android:id="@+id/action_deviceDetailFragment_to_deviceStatisticsFragment"
+            app:destination="@id/deviceStatisticsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/troubleShootingFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.devicedetail.troubleshooting.TroubleShootingFragment"
+        android:label="fragment_trouble_shooting"
+        tools:layout="@layout/fragment_trouble_shooting">
+        <argument
+            android:name="device_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_troubleShootingFragment_to_requireMaintainFragment"
+            app:destination="@id/requireMaintainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/manufacturerInfoFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.devicedetail.manufacturer.ManufacturerInfoFragment"
+        android:label="fragment_manufacturer_info"
+        tools:layout="@layout/fragment_manufacturer_info">
+        <argument
+            android:name="device_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/warrantyInfoFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.devicedetail.warranty.WarrantyInfoFragment"
+        android:label="fragment_warranty_info"
+        tools:layout="@layout/fragment_warranty_info">
+        <argument
+            android:name="device_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/placeAreaFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.devicedetail.placearea.PlaceAreaFragment"
+        android:label="fragment_place_area"
+        tools:layout="@layout/fragment_place_area">
+        <argument
+            android:name="device_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/requireMaintainFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.devicedetail.requireworkorder.RequireWorkOrderFragment"
+        android:label="fragment_require_maintain"
+        tools:layout="@layout/fragment_require_work_order">
+        <argument
+            android:name="device_id"
+            app:argType="integer" />
+        <argument
+            android:name="add_edit"
+            app:argType="com.clockworkorange.haohsing.ui.main.user.devicedetail.requireworkorder.AddEdit"
+            android:defaultValue="Add" />
+        <argument
+            android:name="m_id"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <argument
+            android:name="note"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+    <fragment
+        android:id="@+id/workOrderLogFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.devicedetail.workorderlog.WorkOrderLogFragment"
+        android:label="fragment_work_order_log"
+        tools:layout="@layout/fragment_work_order_log">
+        <argument
+            android:name="device_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_workOrderLogFragment_to_workOrderDetailPendingFragment"
+            app:destination="@id/workOrderDetailPendingFragment" />
+        <action
+            android:id="@+id/action_workOrderLogFragment_to_workOrderDetailScheduledFragment"
+            app:destination="@id/workOrderDetailScheduledFragment" />
+        <action
+            android:id="@+id/action_workOrderLogFragment_to_workOrderDetailFinishedFragment"
+            app:destination="@id/workOrderDetailFinishedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workOrderDetailPendingFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.devicedetail.workorderlog.pending.WorkOrderDetailPendingFragment"
+        android:label="fragment_work_order_detail"
+        tools:layout="@layout/fragment_work_order_detail_pending">
+        <argument
+            android:name="device_id"
+            app:argType="integer" />
+        <argument
+            android:name="order_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_workOrderDetailPendingFragment_to_requireMaintainFragment"
+            app:destination="@id/requireMaintainFragment"
+            app:popUpTo="@id/workOrderLogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shareMemberFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.devicedetail.share.ShareMemberFragment"
+        android:label="fragment_share_member"
+        tools:layout="@layout/fragment_share_member">
+        <argument
+            android:name="device_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/placeDeviceShareMemberFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.placemanagement.placesharemember.PlaceDeviceShareMemberFragment"
+        android:label="fragment_place_device_share_member"
+        tools:layout="@layout/fragment_place_device_share_member">
+        <argument
+            android:name="place_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_placeDeviceShareMemberFragment_to_userPlaceDeviceShareManagementFragment"
+            app:destination="@id/userPlaceDeviceShareManagementFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userPlaceDeviceShareManagementFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.placemanagement.placepermission.UserPlacePermissionManagementFragment"
+        android:label="fragment_user_place_device_share_management"
+        tools:layout="@layout/fragment_user_place_device_share_management">
+        <argument
+            android:name="place_id"
+            app:argType="integer" />
+        <argument
+            android:name="user_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/workOrderDetailScheduledFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.devicedetail.workorderlog.scheduled.WorkOrderDetailScheduledFragment"
+        android:label="fragment_work_order_detail_scheduled"
+        tools:layout="@layout/fragment_work_order_detail_scheduled">
+        <argument
+            android:name="order_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/workOrderDetailFinishedFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.devicedetail.workorderlog.finished.WorkOrderDetailFinishedFragment"
+        android:label="fragment_work_order_detail_finished"
+        tools:layout="@layout/fragment_work_order_detail_finished">
+        <argument
+            android:name="device_id"
+            app:argType="integer" />
+        <argument
+            android:name="order_id"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/advancedSettingFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.setting.device.AdvancedSettingFragment"
+        android:label="fragment_advanced_setting"
+        tools:layout="@layout/fragment_advanced_setting">
+        <argument
+            android:name="device_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_advancedSettingFragment_to_powerScheduleFragment"
+            app:destination="@id/powerScheduleFragment" />
+        <action
+            android:id="@+id/action_advancedSettingFragment_to_areaSettingFragment"
+            app:destination="@id/areaSettingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/powerScheduleFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.setting.PowerScheduleFragment"
+        android:label="fragment_power_schedule"
+        tools:layout="@layout/fragment_power_schedule">
+        <argument
+            android:name="addedit"
+            app:argType="com.clockworkorange.haohsing.ui.main.user.devicedetail.requireworkorder.AddEdit" />
+        <argument
+            android:name="schedule_id"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <argument
+            android:name="subject_id"
+            app:argType="integer" />
+        <argument
+            android:name="scope"
+            app:argType="com.clockworkorange.domain.entity.ScheduleType" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/termFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.account.TermFragment"
+        android:label="TermFragment" >
+        <argument
+            android:name="title"
+            app:argType="string"/>
+        <argument
+            android:name="url"
+            app:argType="string"/>
+    </fragment>
+    <fragment
+        android:id="@+id/resetWifiFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.pair.user.ResetWifiFragment"
+        android:label="ResetWifiFragment"
+        tools:layout="@layout/fragment_set_up_wi_fi">
+        <argument
+            android:name="mac"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/deviceStatisticsFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.analysis.device.DeviceStatisticsFragment"
+        android:label="DeviceStatisticsFragment"
+        tools:layout="@layout/fragment_device_statistics">
+        <argument
+            android:name="deviceId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/areaSettingFragment"
+        android:name="com.clockworkorange.haohsing.ui.main.user.setting.place.AreaSettingFragment"
+        tools:layout="@layout/fragment_area_setting">
+        <argument
+            android:name="areaId"
+            app:argType="integer"/>
+        <argument
+            android:name="areaName"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_areaSettingFragment_to_powerScheduleFragment"
+            app:destination="@id/powerScheduleFragment" />
+    </fragment>
+
+</navigation>

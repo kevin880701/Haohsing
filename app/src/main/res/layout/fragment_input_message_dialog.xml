@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="63dp"
+            android:layout_height="4dp"
+            android:src="@drawable/shape_round_acacac"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="18dp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            tools:text="修改名稱"
+            android:includeFontPadding="false"
+            android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+            android:textColor="#1E1E24"
+            android:layout_marginTop="24dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/shape_stroke_round_343434">
+
+            <EditText
+                android:id="@+id/et_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:background="@null"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:maxLines="1"
+                android:inputType="text"
+                tools:text="12442r"
+                android:layout_gravity="center_vertical" />
+
+            <ImageButton
+                android:id="@+id/bt_clear"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:src="@drawable/ic_x"
+                android:layout_gravity="end"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/bt_save"
+            style="@style/Widget.NormalButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/save"
+            android:textColor="@android:color/white"
+            android:textAppearance="@style/TextAppearance.HAOHSING.HeadLine3"
+            android:includeFontPadding="false"
+            android:layout_marginBottom="20dp" />
+
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/bt_close"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@null"
+        android:src="@drawable/ic_x"
+        android:layout_gravity="top|end" />
+
+</FrameLayout>
